@@ -1,0 +1,34 @@
+{
+	"products": [
+	  {
+		"name": "Golden Censer and Boat",
+		"description": "Holds the charcoal and incense burned at solemn occasions",
+		"price": "25,000"
+	  },
+	  {
+		"name": "Silver Censer and Boat",
+		"description": "Holds the charcoal and incense burned at solemn occasions",
+		"price": "23,000"
+	  },
+	  {
+		"name": "Reliquary",
+		"description": "Reliquary for displaying relics",
+		"price": "2,000"
+	  },
+	  {
+		"name": "Cruits",
+		"description": "Used in mass to carry the water or wine that are used in the consecration",
+		"price": "5,000"
+	  },
+	  {
+		"name": "Chalice Set",
+		"description": "Set of Chalice Vessels that holds sacramental wine",
+		"price": "30,000"
+	  },
+	  {
+		"name": "Altar 6x6 Bells",
+		"description": "A small hand-held altar bells for holy mass",
+		"price": "15,000"
+	  }
+	]
+  }

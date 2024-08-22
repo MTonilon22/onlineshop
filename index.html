@@ -1,158 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Flos Carmeli Shop</title>
-</head>
-<body>
-        
-        <header class="header">
-          <a href="#" class="logo">Flos Carmeli Religious Articles</a>
-          <!-- Basket Image -->
-          <img id="basket-img" class="basket" src="/Images/addToCart.png" alt="basket">
-        </header>
-        
-        <nav>
-          <div class="expand">
-            <div class="carousel">
-              <ul class="slides">
-                <input type="radio" name="radio-buttons" id="img-1" checked />
-                <li class="slide-container">
-                  <div class="slide-image">
-                    <img src="/Images/slider1.jpg">
-                  </div>
-                  <div class="carousel-controls">
-                    <label for="img-3" class="prev-slide">
-                      <span class="arrows">&lsaquo;</span>
-                    </label>
-                    <label for="img-2" class="next-slide">
-                      <span class="arrows">&rsaquo;</span>
-                    </label>
-                  </div>
-                </li>
-                <input type="radio" name="radio-buttons" id="img-2" />
-                <li class="slide-container">
-                  <div class="slide-image">
-                    <img src="/Images/slider2.png">
-                  </div>
-                  <div class="carousel-controls">
-                    <label for="img-1" class="prev-slide">
-                      <span class="arrows">&lsaquo;</span>
-                    </label>
-                    <label for="img-3" class="next-slide">
-                      <span class="arrows">&rsaquo;</span>
-                    </label>
-                  </div>
-                </li>
-                <input type="radio" name="radio-buttons" id="img-3" />
-                <li class="slide-container">
-                  <div class="slide-image">
-                    <img src="/Images/slider3.jpg">
-                  </div>
-                  <div class="carousel-controls">
-                    <label for="img-2" class="prev-slide">
-                      <span class="arrows">&lsaquo;</span>
-                    </label>
-                    <label for="img-1" class="next-slide">
-                      <span class="arrows">&rsaquo;</span>
-                    </label>
-                  </div>
-                </li>
-              </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Religious Articles Shop</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Religious Articles Shop</a>
+      <!-- Basket Image -->
+      <img
+        id="basket-img"
+        class="basket"
+        src="/Images/addToCart.png"
+        alt="basket"
+      />
+    </header>
+
+    <nav>
+      <div class="expand">
+        <div class="carousel">
+          <ul class="slides">
+            <input type="radio" name="radio-buttons" id="img-1" checked />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img src="/Images/slider1.jpg" />
+              </div>
+              <div class="carousel-controls">
+                <label for="img-3" class="prev-slide">
+                  <span class="arrows">&lsaquo;</span>
+                </label>
+                <label for="img-2" class="next-slide">
+                  <span class="arrows">&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-2" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img src="/Images/slider2.jpg" />
+              </div>
+              <div class="carousel-controls">
+                <label for="img-1" class="prev-slide">
+                  <span class="arrows">&lsaquo;</span>
+                </label>
+                <label for="img-3" class="next-slide">
+                  <span class="arrows">&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-3" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img src="/Images/slider3.jpg" />
+              </div>
+              <div class="carousel-controls">
+                <label for="img-2" class="prev-slide">
+                  <span class="arrows">&lsaquo;</span>
+                </label>
+                <label for="img-1" class="next-slide">
+                  <span class="arrows">&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Product Cards -->
+    <main class="card-container">
+      <div
+        class="card"
+        id="product-container"
+        data-product-image="Images/firstImage.png"
+      >
+        <div class="content">
+          <div class="back">
+            <div class="back-content">
+              <img
+                class="card-image"
+                src="Images/firstImage.png"
+                alt="Product Image"
+              />
+              <p class="product-name"></p>
+              <p class="product-price"></p>
+              <button class="purchase-btn">Order</button>
             </div>
           </div>
-        </nav>
-        <!-- Product Cards -->
-        <main class="card-container">
-          <div class="card" id="product-container" data-product-image="Images/firstImage.png">
-            <div class="content">
-              <div class="back">
-                <div class="back-content">
-                  <img class="card-image" src="Images/firstImage.png" alt="Product Image">
-                  <p class="product-name"></p>
-                  <p class="product-price"></p>
-                  <button class="purchase-btn">Order</button>
-                </div>
-              </div>
+        </div>
+      </div>
+      <div class="card" data-product-image="Images/secondImage.png">
+        <div class="content">
+          <div class="back">
+            <div class="back-content">
+              <img
+                class="card-image"
+                src="Images/secondImage.png"
+                alt="Product Image"
+              />
+              <p class="product-name"></p>
+              <p class="product-price"></p>
+              <button class="purchase-btn">Order</button>
             </div>
           </div>
-          <div class="card" data-product-image="Images/secondImage.png">
-            <div class="content">
-              <div class="back">
-                <div class="back-content">
-                  <img class="card-image" src="Images/secondImage.png" alt="Product Image">
-                  <p class="product-name"></p>
-                  <p class="product-price"></p>
-                  <button class="purchase-btn">Order</button>
-                </div>
-              </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        id="product-container"
+        data-product-image="/Images/thirdImage.png"
+      >
+        <div class="content">
+          <div class="back">
+            <div class="back-content">
+              <img class="card-image" src="/Images/thirdImage.png" />
+              <p class="product-name"></p>
+              <p class="product-price"></p>
+              <button class="purchase-btn">Order</button>
             </div>
           </div>
-          <div class="card" id="product-container" data-product-image="/Images/thirdImage.png">
-            <div class="content">
-              <div class="back">
-                <div class="back-content">
-                  <img class="card-image" src="/Images/thirdImage.png">
-                  <p class="product-name"></p>
-                  <p class="product-price"></p>
-                  <button class="purchase-btn">Order</button>
-                </div>
-              </div>
-             
+        </div>
+      </div>
+      <div class="card" data-product-image="/Images/fourthImage.png">
+        <div class="content">
+          <div class="back">
+            <div class="back-content">
+              <img class="card-image" src="/Images/fourthImage.png" />
+              <p class="product-name"></p>
+              <p class="product-price"></p>
+              <button class="purchase-btn">Order</button>
             </div>
           </div>
-          <div class="card" data-product-image="/Images/fourthImage.png">
-            <div class="content">
-              <div class="back">
-                <div class="back-content">
-                  <img class="card-image" src="/Images/fourthImage.png">
-                  <p class="product-name"></p>
-                  <p class="product-price"></p>
-                  <button class="purchase-btn">Order</button>
-                </div>
-              </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        id="product-container"
+        data-product-image="/Images/fifthImage.png"
+      >
+        <div class="content">
+          <div class="back">
+            <div class="back-content">
+              <img class="card-image" src="/Images/fifthImage.png" />
+              <p class="product-name"></p>
+              <p class="product-price"></p>
+              <button class="purchase-btn">Order</button>
             </div>
           </div>
-          <div class="card" id="product-container" data-product-image="/Images/fifthImage.png">
-            
-            <div class="content">
-              
-              <div class="back">
-                
-                <div class="back-content">
-                  <img class="card-image" src="/Images/fifthImage.png">
-                  <p class="product-name"></p>
-                  <p class="product-price"></p>
-                  <button class="purchase-btn">Order</button>
-                </div>
-              </div>
-             
+        </div>
+      </div>
+      <div
+        class="card"
+        id="product-container"
+        data-product-image="/Images/sixthImage.png"
+      >
+        <div class="content">
+          <div class="back">
+            <div class="back-content">
+              <img class="card-image" src="/Images/sixthImage.png" />
+              <p class="product-name"></p>
+              <p class="product-price"></p>
+              <button class="purchase-btn">Order</button>
             </div>
           </div>
-          <div class="card" id="product-container" data-product-image="/Images/sixthImage.png">
-            <div class="content">
-              <div class="back">
-                <div class="back-content">
-                  <img class="card-image" src="/Images/sixthImage.png" >
-                  <p class="product-name"></p>
-                  <p class="product-price"></p>
-                  <button class="purchase-btn">Order</button>
-                </div>
-              </div>
-            </div>
-          </div>
-            <!-- Modal structure -->
-            <div id="custom-alert" class="modal">
-              <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <p id="alert-message"></p>
-                <ul id="basket-items"></ul>
-                <button class="purchase-btn" id="checkout">Checkout</button>
-              </div>
-            </div>
-        </main>
-        <script src="script.js"></script>
-</body>
+        </div>
+      </div>
+      <!-- Modal structure -->
+      <div id="custom-alert" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <p id="alert-message"></p>
+          <ul id="basket-items"></ul>
+          <button class="purchase-btn" id="checkout">Checkout</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>

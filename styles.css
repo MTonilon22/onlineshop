@@ -8,147 +8,146 @@
   scroll-behavior: smooth;
   font-family: "Gabriela", "sans-serif";
 }
-/* :root {
-  --bg-color: #192d50;
-  --main-color: #FFB404;
-  --text-color: #fefefe;
-} */
-
 :root {
+  --bg-color: #192d50;
+  --main-color: #ffb404;
+  --text-color: #fefefe;
+}
+
+/* :root {
   --bg-color: #0f3c54;
   --main-color: #fcc05f;
   --text-color: #fefefe;
-}
+} */
 body {
-background: var(--bg-color);
-color: var(--text-color);
-padding-bottom: 25px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding-bottom: 25px;
 }
 /* This is the header design */
 .header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-padding: 1rem 1%;
-background: var(--bg-color);
-display: flex;
-justify-content: space-between;
-align-items: center;
-z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
 .logo {
-font-size: 1.5rem;
-color: var(--main-color);
-font-weight: 600;
-cursor: default;
+  font-size: 1.5rem;
+  color: var(--main-color);
+  font-weight: 600;
+  cursor: default;
 }
 .basket {
-width: 5%;
-cursor: pointer;
+  width: 5%;
+  cursor: pointer;
 }
 /* End of header design */
 /* This is carousel design */
 .expand {
-width: 100%;
-align-items: center;
-justify-content: center;
-margin-top: 2%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
 }
 .carousel {
-width: 100%; /* Make the carousel occupy the full width of the screen */
-overflow: hidden; /* Hide any overflow */
-margin-top: 5%;
+  width: 100%; /* Make the carousel occupy the full width of the screen */
+  overflow: hidden; /* Hide any overflow */
+  margin-top: 5%;
 }
 
 ul.slides {
-display: block;
-position: relative;
-height: 600px;
-margin: 0;
-overflow: hidden;
-list-style: none;
+  display: block;
+  position: relative;
+  height: 600px;
+  margin: 0;
+  overflow: hidden;
+  list-style: none;
 }
 
 .slides * {
-user-select: none;
--ms-user-select: none;
--moz-user-select: none;
--khtml-user-select: none;
--webkit-user-select: none;
--webkit-touch-callout: none;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 ul.slides input {
-display: none; 
+  display: none;
 }
 
 .slide-container {
-width: 100%; /* Ensure each slide container takes up 100% width */
+  width: 100%; /* Ensure each slide container takes up 100% width */
 }
 .slide-image {
-display: block;
-position: absolute;
-width: 100%;
-height: 100%;
-top: 0;
-opacity: 0;
-transition: all .7s ease-in-out;
-}   
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
 
 .slide-image img {
-width: auto;
-min-width: 100%;
-height: 100%;
+  width: auto;
+  min-width: 100%;
+  height: 100%;
 }
 
 .carousel-controls {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-z-index: 999;
-font-size: 100px;
-line-height: 600px;
-color: #fff;
-transform: translateY(-50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
+  transform: translateY(-50%);
 }
 
-.arrows{
+.arrows {
   z-index: 500;
 }
 
-
 .carousel-controls label {
-display: none;
-position: absolute;
-padding: 0 20px;
-cursor: pointer;
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  cursor: pointer;
 }
 .carousel-controls .prev-slide {
-width: 1%;
-text-align: left;
-left: 0;
-height: 5px;
+  width: 1%;
+  text-align: left;
+  left: 0;
+  height: 5px;
 }
 
 .carousel-controls .next-slide {
-width: 1%;
-text-align: right;
-right: 0;
-margin-right: 2%;
-height: 5px;
+  width: 1%;
+  text-align: right;
+  right: 0;
+  margin-right: 2%;
+  height: 5px;
 }
 
 input:checked + .slide-container .slide-image {
-opacity: 1;
-transform: scale(1);
-transition: opacity 1s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
 }
 
 input:checked + .slide-container .carousel-controls label {
- display: block; 
+  display: block;
 }
 
 input#img-1:checked,
@@ -157,341 +156,350 @@ input#img-3:checked,
 input#img-4:checked,
 input#img-5:checked,
 input#img-6:checked {
-opacity: 1;
+  opacity: 1;
 }
 
-input:checked + .slide-container .nav label { display: block; }
+input:checked + .slide-container .nav label {
+  display: block;
+}
 
 /* End of Carousel Design */
 
 /* This is the Card Design */
 
 .card-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 50px; /* Set 10px gap in both x and y directions */
-width: 65%;
-margin: 3% auto 0; /* Add margin-top and center the container within its parent */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; /* Set 10px gap in both x and y directions */
+  width: 65%;
+  margin: 3% auto 0; /* Add margin-top and center the container within its parent */
 }
 
 .card {
-flex: 1 1 calc(33.333% - 20px); /* Each card takes up one-third of the container's width minus the gap */
-max-width: 33.33%; /* Ensure the card doesn't exceed one-third of the container's width */
-height: 300px; /* Example height */
-background-color: #fff; /* Example background color */
-border-radius: 5px; /* Example border radius */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example box shadow */
+  flex: 1 1 calc(33.333% - 20px); /* Each card takes up one-third of the container's width minus the gap */
+  max-width: 33.33%; /* Ensure the card doesn't exceed one-third of the container's width */
+  height: 300px; /* Example height */
+  background-color: #fff; /* Example background color */
+  border-radius: 5px; /* Example border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example box shadow */
 }
 
 /* Existing styles */
 .content {
-width: 100%;
-height: 100%;
-transform-style: preserve-3d;
-transition: transform 300ms;
-box-shadow: 0px 0px 10px 1px #000000ee;
-border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
 }
 
-.front, .back {
-background-color: #151515;
-position: absolute;
-width: 100%;
-height: 100%;
-backface-visibility: hidden;
--webkit-backface-visibility: hidden;
-border-radius: 5px;
-overflow: hidden;
+.front,
+.back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .back {
-width: 100%;
-height: 100%;
-justify-content: center;
-display: flex;
-align-items: center;
-overflow: hidden;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .back-content {
-position: absolute; 
-width: 99%;
-height: 99%;
-background-color: var(--bg-color);
-border-radius: 5px;
-color: white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .card:hover .content {
-width: 100%;
-height: 100%;
-transform-style: preserve-3d;
-transition: transform 300ms;
-box-shadow: 0px 0px 10px 1px #000000ee;
-border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
 }
 
-.card:hover .front, .card:hover .back {
-background-color: #151515;
-position: absolute;
-width: 100%;
-height: 100%;
-backface-visibility: hidden;
--webkit-backface-visibility: hidden;
-border-radius: 5px;
-overflow: hidden;
+.card:hover .front,
+.card:hover .back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .card:hover .back {
-width: 100%;
-height: 100%;
-justify-content: center;
-display: flex;
-align-items: center;
-overflow: hidden;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .card:hover .back::before {
-position: absolute;
-content: ' ';
-display: block;
-width: 160px;
-height: 160%;
-background: linear-gradient(90deg, transparent, #f38c9b, #f38c9b, #FFB404, #FFB404, transparent);
-animation: rotation_481 5000ms infinite linear;
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #f38c9b,
+    #f38c9b,
+    #ffb404,
+    #ffb404,
+    transparent
+  );
+  animation: rotation_481 5000ms infinite linear;
 }
 
 .card:hover .back-content {
-position: absolute; 
-width: 99%;
-height: 99%;
-background-color: var(--bg-color);
-border-radius: 5px;
-color: white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes rotation_481 {
-0% {
-  transform: rotateZ(0deg);
-}
+  0% {
+    transform: rotateZ(0deg);
+  }
 
-100% {
-  transform: rotateZ(360deg);
-}
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 
 .front {
-transform: rotateY(180deg);
-color: white;
+  transform: rotateY(180deg);
+  color: white;
 }
 
 .card-image {
-width: 80%;
-height: 50%;
+  width: 80%;
+  height: 50%;
 }
 
 .purchase-btn {
-font-size: 1rem;
-color: var(--bg-color);
-background: var(--main-color);
-border-radius: 4rem;
-padding: 5px 10px;
-margin-top: 5%;
-margin-left: 60%;
+  font-size: 1rem;
+  color: var(--bg-color);
+  background: var(--main-color);
+  border-radius: 4rem;
+  padding: 5px 10px;
+  margin-top: 5%;
+  margin-left: 60%;
 }
 
 .purchase-btn:hover {
-cursor: pointer;
-box-shadow: 0 0 .7rem var(--main-color);
-transition: 0.6s ease;
+  cursor: pointer;
+  box-shadow: 0 0 0.7rem var(--main-color);
+  transition: 0.6s ease;
 }
 
 p {
-font-size: .8rem;
-text-align: center;
+  font-size: 0.8rem;
+  text-align: center;
 }
-
 
 /* Modal container */
 .modal {
-display: none; 
-position: fixed; 
-z-index: 1; 
-left: 0;
-top: 0;
-width: 100%; 
-height: 100%; 
-overflow: auto; 
-background-color: rgb(0,0,0); 
-background-color: rgba(0,0,0,0.4); 
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal content */
 .modal-content {
-background-color: var(--bg-color);
-margin: 15% auto; 
-padding: 20px;
-border: 1px solid #888;
-width: 80%; 
+  background-color: var(--bg-color);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 .modal-image {
-width: 100px; /* Adjust the width as needed */
-height: auto; /* Maintain aspect ratio */
-display: block;
-margin: 10px 0; /* Add some margin for spacing */
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 10px 0; /* Add some margin for spacing */
 }
 
 /* Close button */
 .close-btn {
-color: #aaa;
-float: right;
-font-size: 28px;
-font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close-btn:hover,
 .close-btn:focus {
-color: black;
-text-decoration: none;
-cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* basket items list */
 #basket-items {
-display: flex;
-flex-wrap: wrap; /* Enable flex wrap */
-justify-content: center; /* Center the items horizontally */
-gap: 10px; /* Add space between items */
+  display: flex;
+  flex-wrap: wrap; /* Enable flex wrap */
+  justify-content: center; /* Center the items horizontally */
+  gap: 10px; /* Add space between items */
 }
 
 /* Default styles */
 #basket-items li {
-display: flex;
-flex-direction: column; /* Arrange items in a column */
-align-items: center;
-width: 20%; /* Adjust width to fit 3 items per row, accounting for gap */
-margin: 3% auto 0; /* Add margin-top and center the container within its parent */
-height: 250px; /* Example height */
-background-color: var(--text-color); /* Example background color */
-border-radius: 5px; /* Example border radius */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example box shadow */
-padding: 10px; /* Add padding for better spacing */
-box-sizing: border-box; /* Ensure padding is included in the height */
-color: var(--bg-color);
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center;
+  width: 20%; /* Adjust width to fit 3 items per row, accounting for gap */
+  margin: 3% auto 0; /* Add margin-top and center the container within its parent */
+  height: 250px; /* Example height */
+  background-color: var(--text-color); /* Example background color */
+  border-radius: 5px; /* Example border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example box shadow */
+  padding: 10px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding is included in the height */
+  color: var(--bg-color);
 }
 
 #basket-items li img {
-width: 100px; /* Adjust the width as needed */
-height: auto; /* Maintain aspect ratio */
-margin-bottom: 10px; /* Space between image and text */
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
 }
 
 #basket-items li span {
-display: block;
-text-align: center;
-margin: 5px 0; /* Space between text elements */
+  display: block;
+  text-align: center;
+  margin: 5px 0; /* Space between text elements */
 }
 
 #checkout {
-margin-left: 90%;
+  margin-left: 90%;
 }
 
 /*=== SMALL SCREEN AND BELOW (GENERAL)===*/
 @media (max-width: 767px) {
-  .logo{
+  .logo {
     font-size: 1.2rem;
-color: var(--main-color);
-font-weight: 600;
-cursor: default;
-text-align: center;
-padding: 5px;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+    text-align: center;
+    padding: 5px;
   }
-.header {
-  flex-direction: row;
-  align-items: flex-end;
-  padding: 15px;
-  height: 8%;
-}
-.basket {
-  width: 10%;
-}
-.carousel {
-  margin-top: 10%;
-}
-.card-container {
-  width: 95%;
-  margin: 5% auto 0;
-  gap: 20px;
-  margin-top: -60%;
-  
-}
-.card {
-  flex: 1 1 100%;
-  max-width: 90%;
-}
-#basket-items li {
-  width: 100%;
-}
-.card-image{
-  margin-top: 3.5%;
-  width: 65%;
-}
-.back-content{
-  position: absolute; 
-width: 99%;
-height: 99%;
-background-color: var(--bg-color);
-border-radius: 5px;
-color: white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
-}
-.product-price ,.product-name{
-  font-size: 1rem;
-  
-}
-.product-name{
-  margin-top: 15px;
-}
-.purchase-btn{
-  padding: 5px 15px;
-  margin-right: -5%;
-  margin-bottom: 3%;
-}
-.modal-content{
-  margin-top: 30%;
-}
-#checkout{
-  margin-left: 60%;
-}
-.slide-image {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0;
-  transition: all .7s ease-in-out;
-  }   
-  
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 15px;
+    height: 8%;
+  }
+  .basket {
+    width: 10%;
+  }
+  .carousel {
+    margin-top: 10%;
+  }
+  .card-container {
+    width: 90%;
+
+    margin: 5% auto 0;
+    gap: 20px;
+    margin-top: -60%;
+  }
+  .card {
+    flex: 1 1 100%;
+  }
+  #basket-items li {
+    width: 100%;
+  }
+  .card-image {
+    margin-top: 3.5%;
+    width: 65%;
+  }
+  .back-content {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .product-price,
+  .product-name {
+    font-size: 1rem;
+  }
+  .product-name {
+    margin-top: 15px;
+  }
+  .purchase-btn {
+    padding: 5px 15px;
+    margin-right: -5%;
+    margin-bottom: 3%;
+  }
+  .modal-content {
+    margin-top: 30%;
+  }
+  #checkout {
+    margin-left: 60%;
+  }
+  .slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+  }
+
   .slide-image img {
-  width: 100%;
-  min-width: 100%;
-  height: 55%;
-  
+    width: 100%;
+    min-width: 100%;
+    height: 55%;
   }
   .carousel-controls .prev-slide {
     width: 1px;
@@ -500,90 +508,82 @@ gap: 10px;
     left: 0;
     height: 5px;
     top: -150px;
-    }
-    
-    .carousel-controls .next-slide {
+  }
+
+  .carousel-controls .next-slide {
     width: 1%;
     text-align: right;
     right: 0;
     margin-right: 5%;
     height: 5px;
     top: -150px;
-    }
-  
+  }
 }
 
 /* EXTRA LARGE SCREEN */
 @media (min-width: 1200px) {
-.card {
-  flex: 1 1 calc(25% - 20px);
-  max-width: 25%;
-}
-
-
+  .card {
+    flex: 1 1 calc(25% - 20px);
+    max-width: 25%;
+  }
 }
 
 /* LARGE SCREEN */
 @media (min-width: 992px) and (max-width: 1199px) {
-.card {
-  flex: 1 1 calc(33.333% - 20px);
-  max-width: 33.333%;
-  
-}
-
-
+  .card {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 33.333%;
+  }
 }
 
 /* MEDIUM SCREEN */
 @media (min-width: 768px) and (max-width: 991px) {
-.card {
-  flex: 3 3 calc(33.33% - 20px);
+  .card {
+    flex: 3 3 calc(33.33% - 20px);
+  }
 
-}
+  .card-container {
+    width: 95%;
+    margin: 5% auto 0;
+    gap: 10px;
+    margin-top: -12%;
+  }
+  .product-price,
+  .product-name {
+    font-size: 1.3rem;
+  }
+  .product-name {
+    margin-top: 10px;
+  }
+  .purchase-btn {
+    padding: 8px 15px;
+    margin-right: -5%;
+    margin-bottom: 8%;
+  }
+  .card-image {
+    margin-top: 8%;
+    width: 50%;
+  }
+  .modal-content {
+    margin-top: 10%;
+  }
+  #checkout {
+    margin-left: 80%;
+  }
+  .slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+  }
 
-.card-container {
-  width: 95%;
-  margin: 5% auto 0;
-  gap: 10px;
-  margin-top: -12%;
-  
-}
-.product-price ,.product-name{
-  font-size: 1.3rem;
-  
-}
-.product-name{
-  margin-top: 10px;
-}
-.purchase-btn{
-  padding: 8px 15px;
-  margin-right: -5%;
-  margin-bottom: 8%;
-}
-.card-image{
-  margin-top: 8%;
-  width: 50%;
-}
-.modal-content{
-  margin-top: 10%;
-}
-#checkout{
-  margin-left: 80%;
-}
-.slide-image {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0;
-  transition: all .7s ease-in-out;
-  }   
-  
   .slide-image img {
-  width: 100%;
-  min-width: 100%;
-  height: 80%;
+    width: 100%;
+    min-width: 100%;
+    height: 80%;
   }
   .carousel-controls .prev-slide {
     width: 1px;
@@ -591,48 +591,47 @@ gap: 10px;
     left: 0;
     height: 5px;
     top: -85px;
-    }
-    
-    .carousel-controls .next-slide {
+  }
+
+  .carousel-controls .next-slide {
     width: 1%;
     text-align: right;
     right: 0;
     margin-right: 5%;
     height: 5px;
     top: -85px;
-    }
+  }
 }
 
 /* SMALL SCREEN */
 @media (min-width: 576px) and (max-width: 767px) {
-.card {
-  flex: 1 1 calc(100% - 20px);
-  max-width: 100%;
-}
+  .card {
+    flex: 1 1 calc(100% - 20px);
+    max-width: 100%;
+  }
 }
 
 /* EXTRA SMALL SCREEN */
 @media (min-width: 415px) and (max-width: 575px) {
-.card {
-  flex: 1 1 calc(100% - 20px);
-  max-width: 100%;
-}
+  .card {
+    flex: 1 1 calc(100% - 20px);
+    max-width: 100%;
+  }
 }
 
 /* iPhone Plus */
 @media (min-width: 376px) and (max-width: 414px) {
-.card {
-  flex: 1 1 calc(100% - 20px);
-  max-width: 100%;
-}
-
+  .card {
+    flex: 1 1 calc(100% - 20px);
+    max-width: 100%;
+  }
 }
 
 /* iPhone X */
 @media (max-width: 375px) {
-.card {
-  flex: 1 1 calc(100% - 20px);
-  max-width: 100%;
-  margin-bottom: 10px;
-}
+  .card {
+    flex: 1 1 calc(100% - 20px);
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
 }
